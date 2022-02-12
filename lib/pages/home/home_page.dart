@@ -99,6 +99,65 @@ class _HomePageState extends State<HomePage> {
             top: _screenHeigth * .70,
             currentIndex: _currentIndex,
           ),
+          Positioned(
+            bottom: 26 + MediaQuery.of(context).padding.bottom,
+            left: 0,
+            right: 0,
+            height: _screenHeigth * 0.12,
+            child: Container(
+              child: ListView(
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+                    child: Container(
+                      width: 82,
+                      //height: 50,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+                    child: Container(
+                      width: 82,
+                      //height: 50,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+                    child: Container(
+                      width: 82,
+                      //height: 50,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+                    child: Container(
+                      width: 82,
+                      //height: 50,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+                    child: Container(
+                      width: 82,
+                      //height: 50,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
