@@ -20,57 +20,58 @@ class MenuApp extends StatelessWidget {
         child: Container(
           //color: Colors.red,
           height: MediaQuery.of(context).size.height * 0.55,
-          child: Column(
-            children: <Widget>[
-              Image.network(
-                'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/QR_Code_Model_1_Example.svg/528px-QR_Code_Model_1_Example.svg.png',
-                height: 100,
-                color: Colors.white,
-              ),
-              Text.rich(
-                TextSpan(
-                  text: 'Banco ',
-                  children: [
-                    TextSpan(
-                        text: '260 - Nu Pagamentos S.A',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                  ],
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              children: <Widget>[
+                Image.network(
+                  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/QR_Code_Model_1_Example.svg/528px-QR_Code_Model_1_Example.svg.png',
+                  height: 100,
+                  color: Colors.white,
                 ),
-                style: TextStyle(fontSize: 12),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Text.rich(
-                TextSpan(
-                  text: 'Agência ',
-                  children: [
-                    TextSpan(
-                        text: '0001',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                  ],
+                Text.rich(
+                  TextSpan(
+                    text: 'Banco ',
+                    children: [
+                      TextSpan(
+                          text: '260 - Nu Pagamentos S.A',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                  style: TextStyle(fontSize: 12),
                 ),
-                style: TextStyle(fontSize: 12),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Text.rich(
-                TextSpan(
-                  text: 'Conta ',
-                  children: [
-                    TextSpan(
-                        text: '5909739-1',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                  ],
+                SizedBox(
+                  height: 5,
                 ),
-                style: TextStyle(fontSize: 12),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              SingleChildScrollView(
-                child: Padding(
+                Text.rich(
+                  TextSpan(
+                    text: 'Agência ',
+                    children: [
+                      TextSpan(
+                          text: '0001',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                  style: TextStyle(fontSize: 12),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text.rich(
+                  TextSpan(
+                    text: 'Conta ',
+                    children: [
+                      TextSpan(
+                          text: '5909739-1',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                  style: TextStyle(fontSize: 12),
+                ),
+                SizedBox(
+                  height: 45,
+                ),
+                Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
                     children: <Widget>[
@@ -118,16 +119,17 @@ class MenuApp extends StatelessWidget {
                           splashColor: Colors.purple[900],
                           child: Text(
                             'SAIR DO APP',
-                            style: TextStyle(fontSize: 10),
+                            style: TextStyle(
+                                fontSize: 10, fontWeight: FontWeight.bold),
                           ),
                           onPressed: () {},
                         ),
                       ),
                     ],
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),
